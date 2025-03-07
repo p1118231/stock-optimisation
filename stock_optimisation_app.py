@@ -14,8 +14,8 @@ app = Flask(__name__)
 model_path = 'stock_optimization_model_gradient.pkl'
 model = joblib.load(model_path)
 
-# Example DataFrame loaded here for demonstration; in production, this might come from a database.
-df_products = pd.read_csv('/Users/breezy/EnhancedProductData.csv')
+#  DataFrame loaded here for demonstration; in production, this might come from a database.
+df_products = pd.read_csv('EnhancedProductData.csv')
 
 @app.route('/predict/<int:product_id>', methods=['GET'])
 def predict(product_id):
